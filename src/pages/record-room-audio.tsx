@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/suspicious/noConsole: don't need */
+/** biome-ignore-all lint/suspicious/noConsole: oi */
 import { useRef, useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -36,7 +36,7 @@ export function RecordRoomAudio() {
     formData.append("file", audio, "audio.webm");
 
     const response = await fetch(
-      `http://localhost:3333/rooms/${params.roomId}/audio`,
+      `http://localhost:3335/rooms/${params.roomId}/audio`,
       {
         method: "POST",
         body: formData,
